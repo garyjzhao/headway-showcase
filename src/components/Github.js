@@ -1,6 +1,11 @@
 import React from "react";
 import { StaticQuery, graphql } from "gatsby";
 import Showcase from "../components/Showcase";
+import styled from "styled-components";
+
+const Heading = styled.h2`
+  text-align: center;
+`;
 
 export default () => (
   <StaticQuery
@@ -24,6 +29,7 @@ export default () => (
     `}
     render={data => (
       <>
+        <Heading>Just a short list of GitHub Repos</Heading>
         {data.github.viewer.pinnedRepositories.edges.map((data, i) => (
           <Showcase
             index={i}
