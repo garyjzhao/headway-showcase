@@ -51,11 +51,15 @@ const ImageWrapper = styled.div`
 
 class Showcase extends React.Component {
   render() {
-    let imagesrc;
+    let imagesrc, copy;
     if (this.props.name === "garyjzhao.github.io") {
       imagesrc = `${personal}`;
+      copy =
+        "This is my personal portfolio website I made back in 2017. I need to update it, but wanted to include it since I am ultilizing the GitHub API.";
     } else {
       imagesrc = `${asana}`;
+      copy =
+        "This is a coding challenge I did for Asana. It was to create a puppy gallery page and useres can click on images to display a fuller image.";
     }
     return (
       <ShowcaseWrapper index={this.props.index}>
@@ -64,7 +68,7 @@ class Showcase extends React.Component {
         </ImageWrapper>
         <div className="copy">
           <h2>{this.props.description}</h2>
-          <p>{this.props.copy}</p>
+          <p>{copy}</p>
           <Button href={this.props.url} target="_blank">
             Visit Site
           </Button>
