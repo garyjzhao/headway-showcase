@@ -14,6 +14,10 @@ const Index = ({ data }) => (
         description={data.node.description}
       />
     ))}
+    <h2>Instagram Feed</h2>
+    {data.allInstagramContent.edges.map((data, i) => (
+      <img src={data.node.images.standard_resolution.url} alt="" />
+    ))}
   </Layout>
 );
 
@@ -28,6 +32,23 @@ export const query = graphql`
               url
               homepageUrl
               description
+            }
+          }
+        }
+      }
+    }
+    allInstagramContent {
+      edges {
+        node {
+          user {
+            username
+          }
+          images {
+            thumbnail {
+              url
+            }
+            standard_resolution {
+              url
             }
           }
         }
