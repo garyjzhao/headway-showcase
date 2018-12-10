@@ -18,8 +18,14 @@ const HeaderWrapper = styled.div`
     }
   }
   .copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     max-width: 400px;
     margin: 0 15px;
+    @media screen and (max-width: 500px) {
+      text-align: center;
+    }
     h1 {
       margin-top: 0;
     }
