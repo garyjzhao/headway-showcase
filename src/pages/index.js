@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "../components/layout";
 import Showcase from "../components/Showcase";
 import { graphql } from "gatsby";
+import Instagram from "../components/Instagram";
 
 const Index = ({ data }) => (
   <Layout>
@@ -14,10 +15,11 @@ const Index = ({ data }) => (
         description={data.node.description}
       />
     ))}
-    <h2>Instagram Feed</h2>
+    {/* <h2>Instagram Feed</h2>
     {data.allInstagramContent.edges.map((data, i) => (
       <img src={data.node.images.standard_resolution.url} alt="" />
-    ))}
+    ))} */}
+    <Instagram />
   </Layout>
 );
 
