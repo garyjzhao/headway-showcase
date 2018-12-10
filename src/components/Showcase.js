@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
+import asana from "../images/asana.jpg";
+import personal from "../images/personal.jpg";
+
 const ShowcaseWrapper = styled.div`
   max-width: 1340px;
   margin: 0 auto;
@@ -45,10 +48,16 @@ const ImageWrapper = styled.div`
 
 class Showcase extends React.Component {
   render() {
+    let imagesrc;
+    if (this.props.name === "garyjzhao.github.io") {
+      imagesrc = `${personal}`;
+    } else {
+      imagesrc = `${asana}`;
+    }
     return (
       <ShowcaseWrapper>
         <ImageWrapper>
-          <img src={this.props.image} alt="Screenshot of my work" />
+          <img src={imagesrc} alt="Screenshot of my work" />
         </ImageWrapper>
         <div className="copy">
           <h2>{this.props.description}</h2>
