@@ -69,10 +69,18 @@ class Showcase extends React.Component {
         <div className="copy">
           <h2>{this.props.description}</h2>
           <p>{copy}</p>
-          <Button href={this.props.url} target="_blank">
+          <Button
+            href={this.props.url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Visit Site
           </Button>
-          <Button href={this.props.repoUrl} target="_blank">
+          <Button
+            href={this.props.repoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             View Repo
           </Button>
         </div>

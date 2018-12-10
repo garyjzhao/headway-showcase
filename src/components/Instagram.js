@@ -53,9 +53,25 @@ export default () => (
     `}
     render={data => (
       <Wrapper>
-        <h2>Snapshot of My Life Away From the Screen 🌊🥾🍤</h2>
+        <h2>
+          Snapshot of My Life Away From the Screen{" "}
+          <span role="img" aria-label="wave">
+            🌊
+          </span>
+          <span role="img" aria-label="hiking">
+            🥾
+          </span>
+          <span role="img" aria-label="shrimp">
+            🍤
+          </span>
+        </h2>
         {data.allInstagramContent.edges.map((data, i) => (
-          <a href={data.node.link} target="_blank" className="image-wrapper">
+          <a
+            href={data.node.link}
+            target="_blank"
+            className="image-wrapper"
+            rel="noopener noreferrer"
+          >
             <img src={data.node.images.standard_resolution.url} alt="" />
           </a>
         ))}
