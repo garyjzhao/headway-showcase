@@ -3,6 +3,8 @@ import Layout from "../components/layout";
 import Showcase from "../components/Showcase";
 import { graphql } from "gatsby";
 
+import asana from "../images/asana.jpg";
+
 const Index = ({ data }) => (
   <Layout>
     <Showcase
@@ -11,6 +13,7 @@ const Index = ({ data }) => (
       description={data.github.repository.description}
       primaryLanguage={data.github.repository.primaryLanguage.name}
       copy="This is a coding challenge I did for Asana. It was to create a puppy gallery page and useres can click on images to display a fuller image."
+      image={asana}
     />
   </Layout>
 );
@@ -22,10 +25,8 @@ export const query = graphql`
         url
         homepageUrl
         description
-        primaryLanguage {
-          name
-        }
       }
+
       user(login: "garyjzhao") {
         avatarUrl
         name

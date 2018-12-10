@@ -1,6 +1,21 @@
 import React from "react";
 import styled from "styled-components";
 
+const ShowcaseWrapper = styled.div`
+  max-width: 1340px;
+  margin: 0 auto;
+  padding: 60px 40px;
+  @media (min-width: 650px) {
+    padding: 60px 100px;
+  }
+  @media screen and (min-width: 500px) {
+    display: flex;
+    align-items: center;
+  }
+  .copy {
+    flex: 1 1 0;
+  }
+`;
 const Button = styled.a`
   background: #59aad3;
   font-size: 18px;
@@ -14,19 +29,38 @@ const Button = styled.a`
   margin-right: 10px;
 `;
 
+const ImageWrapper = styled.div`
+  flex: 1 1 0;
+  max-width: 500px;
+
+  @media screen and (min-width: 500px) {
+    order: 2;
+    margin-left: 25px;
+  }
+  img {
+    width: 100%;
+    box-shadow: 0 0 20px #ccc;
+  }
+`;
+
 class Showcase extends React.Component {
   render() {
     return (
-      <div>
-        <h2>{this.props.description}</h2>
-        <p>{this.props.copy}</p>
-        <Button href={this.props.url} target="_blank">
-          Visit Site
-        </Button>
-        <Button href={this.props.repoUrl} target="_blank">
-          View Repo
-        </Button>
-      </div>
+      <ShowcaseWrapper>
+        <ImageWrapper>
+          <img src={this.props.image} alt="Screenshot of my work" />
+        </ImageWrapper>
+        <div className="copy">
+          <h2>{this.props.description}</h2>
+          <p>{this.props.copy}</p>
+          <Button href={this.props.url} target="_blank">
+            Visit Site
+          </Button>
+          <Button href={this.props.repoUrl} target="_blank">
+            View Repo
+          </Button>
+        </div>
+      </ShowcaseWrapper>
     );
   }
 }
