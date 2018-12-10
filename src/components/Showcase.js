@@ -17,6 +17,7 @@ const ShowcaseWrapper = styled.div`
   }
   .copy {
     flex: 1 1 0;
+    ${props => (props.index === 0 ? "order: 1;" : "order: 2;")}
   }
 `;
 const Button = styled.a`
@@ -37,8 +38,10 @@ const ImageWrapper = styled.div`
   max-width: 500px;
 
   @media screen and (min-width: 500px) {
-    order: 2;
-    margin-left: 25px;
+    ${props =>
+      props.index === 0
+        ? "order: 2;margin-left:25px"
+        : "order: 1;margin-right:25px"}
   }
   img {
     width: 100%;
@@ -55,8 +58,8 @@ class Showcase extends React.Component {
       imagesrc = `${asana}`;
     }
     return (
-      <ShowcaseWrapper>
-        <ImageWrapper>
+      <ShowcaseWrapper index={this.props.index}>
+        <ImageWrapper index={this.props.index}>
           <img src={imagesrc} alt="Screenshot of my work" />
         </ImageWrapper>
         <div className="copy">

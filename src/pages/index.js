@@ -5,8 +5,9 @@ import { graphql } from "gatsby";
 
 const Index = ({ data }) => (
   <Layout>
-    {data.github.viewer.pinnedRepositories.edges.map(data => (
+    {data.github.viewer.pinnedRepositories.edges.map((data, i) => (
       <Showcase
+        index={i}
         name={data.node.name}
         repoUrl={data.node.url}
         url={data.node.homepageUrl}
