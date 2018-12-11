@@ -4,6 +4,7 @@ import Showcase from "../components/Showcase";
 import styled from "styled-components";
 
 const Heading = styled.h2`
+  margin: 50px 0 0;
   text-align: center;
 `;
 

@@ -1,12 +1,13 @@
-# gatsby-starter-hello-world
-Starter with the bare essentials needed for a [Gatsby](https://www.gatsbyjs.org/) site.
+# Gary Zhao's Submission for Headway's Showcase Project
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
-```
-gatsby new gatsby-site https://github.com/gatsbyjs/gatsby-starter-hello-world
-```
+Hi! 👋🏼
+This is my submission for job application for [Headway](http://headway.io/).
 
-Or [view the live demo here](https://gatsby-starter-hello-world-demo.netlify.com/).
+Technology I used:
 
-## Running in development
-`gatsby develop`
+- [Gatsby](https://www.gatsbyjs.org/)
+- [Styled Components](https://www.styled-components.com/)
+
+If there is any questions, please feel free to reach out to me.
+
+Thanks for stopping by! 🙏🏼

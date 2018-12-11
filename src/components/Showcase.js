@@ -7,9 +7,9 @@ import personal from "../images/personal.jpg";
 const ShowcaseWrapper = styled.div`
   max-width: 1340px;
   margin: 0 auto;
-  padding: 60px 40px;
+  padding: 30px 40px;
   @media (min-width: 650px) {
-    padding: 60px 100px;
+    padding: 30px 100px;
   }
   @media screen and (min-width: 500px) {
     display: flex;
